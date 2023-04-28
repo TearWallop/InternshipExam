@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--Main Report Page-->
+<html lang="en" xmlns="http://www.w3.org/xhtml"><head><meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Page</title>
+    </head>
+        
+    <body>
+        <div class="header">
+            <h1>Available Reports</h1>
+            <button onclick ="reportpageFunction()" class="button2">List of All registered Users</button>
+            <script>
+                function reportpageFunction () {
+                    window.location.href = "Comp_Report.PHP";
+                }
+            </script>
+            <br>
+            <br>
+            <h3>ID Record</h3>
+            <br>
+            <form id="Form_ID" action="Form_ID.php" method="POST">
+                <label for="Form_ID"> FORMID</label> <input type="number" min="1" name="Form_ID" id="Form_ID">
+                <br>
+                <br>
+                <label for="Submit"value="Submit" name="Submit" class="Submit"></label>
+            </form>
+            <br>
+            <br>
+
+            <h3>CITY/MUNICIPALITY RECORD</h3>
+            <form id="City_Municipality" action="City_Municipality.php" method="POST">
+                <label for="city">City/Municipalitty</label>
+                <select name="city" id="city"></select>
+                    <option value="CITY/MUNICIPALITY">City/Municipality</option>
+                    <option value="ALFONSO">Alfonso</option>
+                    <option value="BACOOR">Bacoor</option>
+                    <option value="CAVITE_CITY">Cavite City</option>
+                    <option value="DASMARINAS">Dasmariñas</option>
+                    <option value="GENERAL TRIAS">General Trias</option>
+                    <option value="IMUS">Imus</option>
+                    <option value="INDANG">Indang</option>
+                    <option value="NAIC">Naic</option>
+                    <option value="SILANG">Silang</option>
+                    <option value="TAGAYTAY">Tagaytay</option>
+                    <option value="TANZA">Tanza</option>
+                    <option value="TRECE">Trece</option>
+                </select>
+            <br>
+            <br>
+            <input type="Submit" value="Submit" name="Submit" class="Submit">
+            <br>
+            <br>
+            </form>
+        <br>
+        <br>
+            <h3> FULL VACINATION ID RECORD</h3>
+            <form id="Vacc_ID" action="Vacc_ID.php" method="POST"></form>
+            <label for="FORMID">FORMID:</label><input type="number" min="1" name="FORMID" id="FORMID">
+            <br>
+            <br>
+            <input type="Submit" value="Submit" name="Submit" class="Submit">
+            </form>
+        <br>
+        <br>
+        <h3>VACCINATION STATUS</h3>
+        <form id="Full_Vacc "action="Full_Vacc.php" method="POST">
+            <input type="radio" id="2" name="question1" value="Yes" checked=""><label for="FULLVACNOB">Full vaccinated only, no booster</label>
+            <br>
+            <input type="radio" id="3" name="question1" value="Yes" checked=""><label for="FULLVACB1">Full vaccinated only, booster once</label>
+            <br>
+            <input type="radio" id="4" name="question1" value="Yes" checked=""><label for="FULLVACB2">Full vaccinated only, booster twice</label>
+            <br>
+        <input type="Submit" value="Submit" name="Submit" class="Submit">
+        </form>
+        <br>
+        <button onclick ="returnpageFunction()" class="button3">Click to register for Vaccinaton</button>
+        <script>
+            function returnpageFunction(){
+                window.location.href ="RegVaccForm.php"
+            }
+        </script>
+        </div>
+    </body>
+</html>
